@@ -1,20 +1,28 @@
-
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/container"
+    <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:horizontalSpacing="2dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingBottom="50dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="50dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="2dp" />
 
     <RelativeLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#cc22292c"
+        android:background="#CC22292c"
         android:clickable="true">
 
         <ImageView
@@ -44,10 +52,10 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
             android:layout_toRightOf="@id/btn_backpress"
-            android:text="count"
-
+            android:text="Count"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/btn_ok"
@@ -59,15 +67,13 @@
             android:layout_marginRight="8dp"
             android:background="@color/theme"
             android:clickable="true"
+            android:elevation="3dp"
             android:paddingBottom="6dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="6dp"
             android:text="Done"
-            android:textColor="#ffffff"
-            android:textSize="14dp"
-            android:visibility="visible" />
-
+            android:textColor="#fff" />
 
         <View
             android:layout_width="match_parent"
@@ -75,38 +81,34 @@
             android:layout_alignParentBottom="true"
             android:background="#cc22292f" />
 
-
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/bottom_bar"
+        android:id="@+id/footer_panel"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_gravity="bottom"
-        android:background="#cc22292c"
-        android:clickable="true">
+        android:layout_alignParentBottom="true"
+        android:background="#CC22292c">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#cc22292f" />
-
-        <CheckBox
-            android:id="@+id/btn_check"
+        <Button
+            android:id="@+id/btn_dir"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
-            android:layout_marginRight="12dp"
-            android:button="@null"
-            android:drawableLeft="@drawable/sel_media_item_checked"
+            android:background="@null"
             android:drawablePadding="4dp"
-            android:includeFontPadding="true"
-            android:paddingLeft="4dp"
-            android:text="select"
-            android:textColor="#ffffff" />
+            android:drawableRight="@drawable/text_indicator"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:text="All"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
 
 
     </RelativeLayout>
 
-</FrameLayout>
+
+</RelativeLayout>

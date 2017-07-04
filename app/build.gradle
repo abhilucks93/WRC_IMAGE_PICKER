@@ -24,9 +24,6 @@ dependencies {
     compile project(':WrcImagePicker')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.wildnet.wrcUtility:wrcUtility:1.0.9'
-
-    compile 'com.codinguser.android:contactpicker:3.0.0@aar'
 
 
 }

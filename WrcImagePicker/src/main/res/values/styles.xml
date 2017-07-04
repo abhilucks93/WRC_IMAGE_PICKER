@@ -36,6 +36,11 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!--  这个是加入的代码 -->
     <style name="popupwindow_anim_style">
         <item name="android:windowEnterAnimation">@anim/show_from_bottom</item>
